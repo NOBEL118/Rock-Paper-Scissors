@@ -16,29 +16,21 @@ choice.forEach((choose) => {
 
         let ai = Math.floor(Math.random() * 3) + 1;  // 1=rock, 2=paper, 3=scissors
         let you = choose.id;
-
+        let aiChoice  = "" ;
+        if (ai === 1 ){
+          aiChoice  = "Rock" ;
+        } else if(ai === 2 ) {
+          aiChoice  = "Paper" ;
+        } else {
+          aiChoice  = "Scissors" ;
+        }
+        alert(`Computer chooses ${aiChoice}`)
         if ((ai === 1 && you === "scissors") || (ai === 2 && you === "rock") || (ai === 3 && you === "paper")) {
             // Computer wins
-            if (ai ===1 ){
-                alert("Computer chooses rock ;)") ;
-                comp_score += 1;
-                comp.textContent = comp_score;
-                board.textContent = "Computer Wins!";
-                choose.style.border = "3px solid red";  
-            } else if (ai === 2){
-                alert("Computer chooses paper ;)") ;
-                comp_score += 1;
-                comp.textContent = comp_score;
-                board.textContent = "Computer Wins!";
-                choose.style.border = "3px solid red";  
-            } else{
-                 alert("Computer chooses scissors ;)") ;
-                 comp_score += 1;
-                 comp.textContent = comp_score;
-                 board.textContent = "Computer Wins!";
-                 choose.style.border = "3px solid red";   
-            }
-            
+            comp_score += 1;
+            comp.textContent = comp_score;
+            board.textContent = "Computer Wins!";
+            hoose.style.border = "3px solid red";  
 
         } else if ((you === "rock" && ai === 3) || (you === "paper" && ai === 1) || (you === "scissors" && ai === 2)) {
             // User wins
