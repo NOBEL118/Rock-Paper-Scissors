@@ -19,10 +19,26 @@ choice.forEach((choose) => {
 
         if ((ai === 1 && you === "scissors") || (ai === 2 && you === "rock") || (ai === 3 && you === "paper")) {
             // Computer wins
-            comp_score += 1;
-            comp.textContent = comp_score;
-            board.textContent = "Computer Wins!";
-            choose.style.border = "3px solid red";  
+            if (ai ===1 ){
+                alert("Computer chooses rock ;)") ;
+                comp_score += 1;
+                comp.textContent = comp_score;
+                board.textContent = "Computer Wins!";
+                choose.style.border = "3px solid red";  
+            } else if (ai === 2){
+                alert("Computer chooses paper ;)") ;
+                comp_score += 1;
+                comp.textContent = comp_score;
+                board.textContent = "Computer Wins!";
+                choose.style.border = "3px solid red";  
+            } else{
+                 alert("Computer chooses scissors ;)") ;
+                 comp_score += 1;
+                 comp.textContent = comp_score;
+                 board.textContent = "Computer Wins!";
+                 choose.style.border = "3px solid red";   
+            }
+            
 
         } else if ((you === "rock" && ai === 3) || (you === "paper" && ai === 1) || (you === "scissors" && ai === 2)) {
             // User wins
