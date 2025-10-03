@@ -22,7 +22,7 @@ choice.forEach((choose) => {
             comp_score += 1;
             comp.textContent = comp_score;
             board.textContent = "Computer Wins!";
-            choose.style.border = "3px solid green";  
+            choose.style.border = "3px solid red";  
 
         } else if ((you === "rock" && ai === 3) || (you === "paper" && ai === 1) || (you === "scissors" && ai === 2)) {
             // User wins
