@@ -24,9 +24,7 @@ choice.forEach((choose) => {
         } else {
           aiChoice  = "Scissors" ;
         }
-        setTimeout(() => {
-            alert(`Computer chooses ${aiChoice}`);
-        }, 2000); 
+        alert(`Computer chooses ${aiChoice}`);
         if ((ai === 1 && you === "scissors") || (ai === 2 && you === "rock") || (ai === 3 && you === "paper")) {
             // Computer wins
             comp_score += 1;
